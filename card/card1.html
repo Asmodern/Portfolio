@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <title> Exemple de carte</title>
+        <style>
+            .navigation ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+    transition: all .3s ease-in-out;
+}
+.navigation ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    top: 0;
+    padding:2px 0;
+    margin: 0;
+
+}
+.navigation:hover hr{
+    border-color: black;
+}
+.navigation{
+    /* visibility: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:transparent;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+.navigation:hover{
+    background-color: white;
+}
+.navigation:hover ul li a{
+    color: black;
+}
+
+.navigation hr{
+    border-color: white;
+}
+
+.navigation ul li a::before{
+    content: "";
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: all .2s ease-in-out;
+}
+.navigation ul li a:hover::before{
+    transform: scaleX(1);
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../cv.html">À propos</a></li>
+                <li><a href="card1.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                </ul>
+                <hr style="margin: 1px;">
+            </nav>
+        </header>
+        <div class="container">
+            <button id="btn-right">
+                <i class="fa-solid fa-arrow-left fa-xl"></i>
+
+            </button>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="card slide card-spotify">
+                        <div class="spotify-header">
+                            <!-- <i src="../img/logo/Spotify.svg" alt=""> -->
+                            <!-- <object data="../img/logo/Spotify.svg" type="image/svg+xml"></object> -->
+                            <img src="../img/logo/Spotify.svg.webp" class="spotify-img">
+                            <h2>écoute en cours</h2>
+                        </div>
+                        <div class="audio-container">
+                            <div class="audio">
+                                
+                                <audio class="audio-file">
+                                    <source src="../audio/night-in-kyoto-avbe.mp3" type="audio/mpeg">
+                                    Votre navigateur ne prend pas en charge la lecture audio.
+                                </audio>
+                                
+                                <div class="audio-element-cont">
+                                    <button class="audio-play" id="audio-play">
+                                        <i class="fa-solid fa-play"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    <button class="audio-pause" id="audio-pause">
+                                        <i class="fa-solid fa-pause"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    
+                                    <input type="range" class="audio-timer" min="0" max="117" value="0" id="audio-timer" step=".00001">
+                                    <div class="audio-element">
+                                        <h4> Night in kyoto</h4>
+                                        <h5>AVBE</h5>
+                                        <div class="duration-container">
+                                            <button class="audio-stop" id="audio-stop">
+                                                <i class="fa-solid fa-stop"></i>
+                                            </button>
+                                            <!-- <button class="audio-speaker" id="audio-speaker">
+                                                <i class="fa-solid fa-volume-high"></i>
+                                            </button> -->
+                                            <div class="audio-volume-container">
+                                                <button class="audio-off" id="audio-off">
+                                                    <i class="fa-solid fa-volume-high"></i>
+                                                </button>
+                                                <div style="display:flex;" >
+                                                    <input type="range" class="audio-volume"  min="0" max="1" step=".1" value="1">
+                                                    <div class="audio-volume-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="audio-duration">
+                                                <span class="duration-time">0:00</span>
+                                                <span>/</span>
+                                                <span class="duration">00:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="audio">
+                                
+                                <audio class="audio-file">
+                                    <source src="../audio/night-in-kyoto-avbe.mp3" type="audio/mpeg">
+                                    Votre navigateur ne prend pas en charge la lecture audio.
+                                </audio>
+                                
+                                <div class="audio-element-cont">
+                                    <button class="audio-play" id="audio-play">
+                                        <i class="fa-solid fa-play"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    <button class="audio-pause" id="audio-pause">
+                                        <i class="fa-solid fa-pause"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    
+                                    <input type="range" class="audio-timer" min="0" max="117" value="0" id="audio-timer" step=".00001">
+                                    <div class="audio-element">
+                                        <h4> Night in kyoto</h4>
+                                        <h5>AVBE</h5>
+                                        <div class="duration-container">
+                                            <button class="audio-stop" id="audio-stop">
+                                                <i class="fa-solid fa-stop"></i>
+                                            </button>
+                                            <!-- <button class="audio-speaker" id="audio-speaker">
+                                                <i class="fa-solid fa-volume-high"></i>
+                                            </button> -->
+                                            <div class="audio-volume-container">
+                                                <button class="audio-off" id="audio-off">
+                                                    <i class="fa-solid fa-volume-high"></i>
+                                                </button>
+                                                <div style="display:flex;" >
+                                                    <input type="range" class="audio-volume"  min="0" max="1" step=".1" value="1">
+                                                    <div class="audio-volume-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="audio-duration">
+                                                <span class="duration-time">0:00</span>
+                                                <span>/</span>
+                                                <span class="duration">00:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="audio">
+                                
+                                <audio class="audio-file">
+                                    <source src="../audio/night-in-kyoto-avbe.mp3" type="audio/mpeg">
+                                    Votre navigateur ne prend pas en charge la lecture audio.
+                                </audio>
+                                
+                                <div class="audio-element-cont">
+                                    <button class="audio-play" id="audio-play">
+                                        <i class="fa-solid fa-play"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    <button class="audio-pause" id="audio-pause">
+                                        <i class="fa-solid fa-pause"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/avbe.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    
+                                    <input type="range" class="audio-timer" min="0" max="117" value="0" id="audio-timer" step=".00001">
+                                    <div class="audio-element">
+                                        <h4> Night in kyoto</h4>
+                                        <h5>AVBE</h5>
+                                        <div class="duration-container">
+                                            <button class="audio-stop" id="audio-stop">
+                                                <i class="fa-solid fa-stop"></i>
+                                            </button>
+                                            <!-- <button class="audio-speaker" id="audio-speaker">
+                                                <i class="fa-solid fa-volume-high"></i>
+                                            </button> -->
+                                            <div class="audio-volume-container">
+                                                <button class="audio-off" id="audio-off">
+                                                    <i class="fa-solid fa-volume-high"></i>
+                                                </button>
+                                                <div style="display:flex;" >
+                                                    <input type="range" class="audio-volume"  min="0" max="1" step=".1" value="1">
+                                                    <div class="audio-volume-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="audio-duration">
+                                                <span class="duration-time">0:00</span>
+                                                <span>/</span>
+                                                <span class="duration">00:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="audio">
+                                <audio class="audio-file">
+                                    <source src="../audio/bluebird-the-lakes-main-version-23198-03-25.mp3" type="audio/mpeg">
+                                    Votre navigateur ne prend pas en charge la lecture audio.
+                                </audio>
+                                
+                                <div class="audio-element-cont">
+                                    <button class="audio-play" id="audio-play">
+                                        <i class="fa-solid fa-play"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/The Lakes.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    <button class="audio-pause" id="audio-pause">
+                                        <i class="fa-solid fa-pause"></i>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                        <div class="beat"></div>
+                                            <img src="../img/The Lakes.jpg"  alt="" class="audio-image">
+                                    </button>
+                                    <!-- <div class="audio-image-cont">
+                                        <img src="../img/The Lakes.jpg"  alt="" class="audio-image">
+                                    </div> -->
+                                    <input type="range" class="audio-timer" min="0" max="206" value="0" id="audio-timer"  step=".00001"> 
+                                    <div class="audio-element">
+                                        <h4> Blue Bird </h4>
+                                        <h5>The Lakes</h5>
+                                        <div class="duration-container">
+                                            <button class="audio-stop" id="audio-stop">
+                                                <i class="fa-solid fa-stop"></i>
+                                            </button>
+                                            <!-- <button class="audio-speaker" id="audio-speaker">
+                                                <i class="fa-solid fa-volume-high"></i>
+                                            </button> -->
+                                            <div class="audio-volume-container">
+                                                <button class="audio-off" id="audio-off">
+                                                    <i class="fa-solid  fa-volume-high"></i>
+                                                </button>
+                                                <div style="display:flex;position: relative;">
+                                                    <input type="range" class="audio-volume"  min="0" max="1" step=".1" value="1">
+                                                    <div class="audio-volume-slider"></div>
+                                                </div>
+                                            </div>
+                                            <div class="audio-duration">
+                                                <span class="duration-time">0:00</span>
+                                                <span>/</span>
+                                                <span class="duration">00:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                          
+
+                    </div>
+                    <div class="card slide">
+                        <div class="card-img">
+                            <img src="../img/profil-insta.jpg" alt="">
+                            <div class="interact">
+                                <i class="like fa-solid fa-thumbs-up fa-xl"></i>
+                                <i class="love fa-solid fa-heart fa-xl"></i>
+                            </div>
+                        </div>
+                        <div class="card-txt">
+                            <p>
+                            Comicus metu praedatorios inlecebras imitatae imitatae progrediar agitant domi et subversasque voluptatum quidam ampla inlecebras transiturus sine agmina et et agitant ne subversasque illuc quidam praedatorios agitant inlecebras voluptatum globos ait longius civitatis subversasque quos comicus dicitur et matronae praetermitto post ait voluptatum basternis inlecebras equos praedatorios civitatis quidem ut quod velut post agitant ait calceis praedatorios opertis transiturus publicos agitant sine quidam relicto inlecebras latera voluptatum globos dicitur complures signatis ut quidem et imitatae silices praetermitto praedatorios signatis spatia tamquam cuncta silices capitibus subversasque dicitur complures et praedatorios et civitatis globos metu tamquam properantes relicto longius et sine tamquam.
+                            </p>
+                        </div>
+                        <div class="signature">
+                            <div class="author">
+                                Thomas Boulogne
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card slide">
+                        <div class="d3">
+                            <div class="front">
+                                <div class="card-img">
+                                    <img src="../img/profil-insta.jpg" alt="">
+                                    <div class="interact">
+                                        <i class="like fa-solid fa-thumbs-up fa-xl"></i>
+                                        <i class="love fa-solid fa-heart fa-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="card-txt">
+                                    <p>
+                                    Comicus metu praedatorios inlecebras imitatae imitatae progrediar agitant domi et subversasque voluptatum quidam ampla inlecebras transiturus sine agmina et et agitant ne subversasque illuc quidam praedatorios agitant inlecebras voluptatum globos ait longius civitatis subversasque quos comicus dicitur et matronae praetermitto post ait voluptatum basternis inlecebras equos praedatorios civitatis quidem ut quod velut post agitant ait calceis praedatorios opertis transiturus publicos agitant sine quidam relicto inlecebras latera voluptatum globos dicitur complures signatis ut quidem et imitatae silices praetermitto praedatorios signatis spatia tamquam cuncta silices capitibus subversasque dicitur complures et praedatorios et civitatis globos metu tamquam properantes relicto longius et sine tamquam.
+                                    </p>
+                                </div>
+                                <div class="signature">
+                                    <div class="author">
+                                        Thomas Boulogne
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <h1 class="back-title">
+                                    Made by
+                                    <br>
+                                    Thomas Boulogne
+                                </h1>
+                                <img src="../img/moi.png" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card slide">
+                        <div class="d3">
+                            <div class="front">
+                                <div class="card-img">
+                                    <img src="../img/profil-insta.jpg" alt="">
+                                    <div class="interact">
+                                        <i class="like fa-solid fa-thumbs-up fa-xl"></i>
+                                        <i class="love fa-solid fa-heart fa-xl"></i>
+                                    </div>
+                                </div>
+                                <div class="card-txt">
+                                    <p>
+                                    Comicus metu praedatorios inlecebras imitatae imitatae progrediar agitant domi et subversasque voluptatum quidam ampla inlecebras transiturus sine agmina et et agitant ne subversasque illuc quidam praedatorios agitant inlecebras voluptatum globos ait longius civitatis subversasque quos comicus dicitur et matronae praetermitto post ait voluptatum basternis inlecebras equos praedatorios civitatis quidem ut quod velut post agitant ait calceis praedatorios opertis transiturus publicos agitant sine quidam relicto inlecebras latera voluptatum globos dicitur complures signatis ut quidem et imitatae silices praetermitto praedatorios signatis spatia tamquam cuncta silices capitibus subversasque dicitur complures et praedatorios et civitatis globos metu tamquam properantes relicto longius et sine tamquam.
+                                    </p>
+                                </div>
+                                <div class="signature">
+                                    <div class="author">
+                                        Thomas Boulogne
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-back back">
+                                <h1 class="back-title">
+                                    Made by
+                                    <br>
+                                    Thomas Boulogne
+                                </h1>
+                                <img src="../img/moi.png" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+            <button id="btn-left">
+                <i class="fa-solid fa-arrow-right fa-xl"></i>
+            </button>
+        </div>
+        <script src="card.js"></script>
+
+    </body>
+</html>
+
