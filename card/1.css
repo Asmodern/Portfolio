@@ -235,7 +235,10 @@ body{
     transition: all .8s;
     /* transition-delay: .8s; */
     backface-visibility: hidden;
+<<<<<<< HEAD
     /* transform: rotateX(68deg) rotateY(-7deg) rotateZ(66deg);   */
+=======
+>>>>>>> 1f7d6c00eea8f6406f909bc71663b4404a259a0b
 }
 
 
@@ -587,10 +590,13 @@ input[type="range"].audio-timer::before {
     transform-origin: left;
 }
 
+<<<<<<< HEAD
 .spotify-header h2{
     text-transform: uppercase;
 }
 
+=======
+>>>>>>> 1f7d6c00eea8f6406f909bc71663b4404a259a0b
 @keyframes beating{
     0%,100%{
         transform: scaleY(0);
